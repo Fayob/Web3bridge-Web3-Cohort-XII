@@ -14,6 +14,7 @@ func isCardValid(cardNumber [16]int) bool {
 		}
 		total += cardNumber[i]
 	}
+	
 	return total % 10 == 0
 
 }
