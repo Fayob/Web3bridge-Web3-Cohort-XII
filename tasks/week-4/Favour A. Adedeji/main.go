@@ -5,7 +5,7 @@ import "fmt"
 func isCardValid(cardNumber [16]int) bool {
 	var total int
 	for i := 0; i < len(cardNumber); i++ {
-		if i%2 == 0 {
+		if i % 2 == 0 {
 			product := cardNumber[i] * 2
 			if product > 9 {
 				product = 1 + (product % 10)
@@ -14,7 +14,7 @@ func isCardValid(cardNumber [16]int) bool {
 		}
 		total += cardNumber[i]
 	}
-	
+
 	return total % 10 == 0
 
 }
