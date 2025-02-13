@@ -65,7 +65,7 @@ contract PiggyBank {
       // check if the caller is a first time contributor
       if(contributions[msg.sender] == 0) {
         contributorsCount += 1;
-      } else {
+      } else if(contributions[msg.sender] == 1) {
         nft.mintNFT(msg.sender);
       }
 
